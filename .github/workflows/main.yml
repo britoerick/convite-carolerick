@@ -1,0 +1,44 @@
+# Publica o convite no GitHub Pages a cada alteração enviada para a branch main.
+# Para usar: em Settings → Pages → Build and deployment → Source, escolha "GitHub Actions".
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:      # permite rodar na mão: aba Actions → Publicar no GitHub Pages → Run workflow
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Separar só o que vai ao ar (sem docs, backend e ferramentas)
+        run: |
+          mkdir _site
+          cp -r index.html assets _site/
+
+      - name: Configurar o Pages
+        uses: actions/configure-pages@v5
+
+      - name: Enviar a pasta publicada
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
