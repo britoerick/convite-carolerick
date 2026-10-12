@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Papel
+   Fundo da página: papel branco de algodão, com relevo (gerado por filtro SVG, sem imagem).
+   ========================================================================== */
+
+:root {
+  /* Papel de algodão: relevo (luz difusa sobre ruído) + mancha de fibra em escala maior */
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='420'><filter id='f' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' seed='5' stitchTiles='stitch'/><feDiffuseLighting surfaceScale='1.5' lighting-color='%23ffffff'><feDistantLight azimuth='225' elevation='82'/></feDiffuseLighting></filter><rect width='100%25' height='100%25' filter='url(%23f)'/></svg>");
+  --mottle: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='640'><filter id='m' x='0' y='0' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='.012 .02' numOctaves='3' seed='11' stitchTiles='stitch'/><feDiffuseLighting surfaceScale='4' lighting-color='%23ffffff'><feDistantLight azimuth='200' elevation='84'/></feDiffuseLighting></filter><rect width='100%25' height='100%25' filter='url(%23m)'/></svg>");
+}
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),
+    linear-gradient(112deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 38%, rgba(90,90,90,.035) 100%),
+    var(--grain),
+    var(--mottle);
+  background-size: auto, auto, 420px 420px, 640px 640px;
+  background-blend-mode: normal, normal, multiply, multiply;
+}

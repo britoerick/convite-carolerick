@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Animações
+   Os ramos se desenham ao aparecer e recomeçam sempre que saem da tela e voltam. Respeita "reduzir movimento".
+   ========================================================================== */
+
+.draw path { stroke-dasharray: 1; stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .draw path { animation: draw 1.5s cubic-bezier(.3, .1, .2, 1) backwards; animation-delay: var(--d, 0s); }
+  .tint { animation: bloom 1.3s ease-out var(--d, 0s) backwards; }
+  /* topo fora da tela: volta ao estado inicial, para a abertura recomeçar ao reaparecer */
+  html.js.top-out .corner-art .draw path { animation: none; stroke-dashoffset: 1; }
+  html.js.top-out .corner-art .tint { animation: none; opacity: 0; }
+  /* fora da tela: o desenho volta ao estado inicial (invisível), para recomeçar a animação ao reaparecer */
+  html.js .end-art.out .draw path { animation: none; stroke-dashoffset: 1; }
+  html.js .end-art.out .tint { animation: none; opacity: 0; }
+  @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes bloom { from { opacity: 0; } to { opacity: 1; } }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carol e Erick · 23.10.2026</title>
+<meta name="description" content="Reserve essa data para celebrar o nosso amor. 23 de outubro de 2026, às 19h, no Platter for You, em Natal.">
+<meta property="og:title" content="Carol e Erick · 23.10.2026">
+<meta property="og:description" content="Reserve essa data para celebrar o nosso amor. Sexta-feira, 23 de outubro de 2026, às 19h, no Platter for You, em Natal.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f5f2">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Cormorant:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/papel.css">
+<link rel="stylesheet" href="assets/css/componentes.css">
+<link rel="stylesheet" href="assets/css/capa.css">
+<link rel="stylesheet" href="assets/css/detalhes.css">
+<link rel="stylesheet" href="assets/css/encerramento.css">
+<link rel="stylesheet" href="assets/css/presentes.css">
+<link rel="stylesheet" href="assets/css/confirmacao.css">
+<link rel="stylesheet" href="assets/css/ramos.css">
+<link rel="stylesheet" href="assets/css/animacoes.css">
+<link rel="stylesheet" href="assets/css/responsivo.css">
+
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/ramos.js" defer></script>
+<script src="assets/js/animacoes.js" defer></script>
+<script src="assets/js/navegacao.js" defer></script>
+<script src="assets/js/presentes.js" defer></script>
+<script src="assets/js/confirmacao.js" defer></script>
+</head>
+<body>
+<main id="convite">
+
+  <section class="hero" aria-label="Convite de casamento">
+    <div class="corner-art" data-ramos="topo" aria-hidden="true"></div>
+    <div class="hero-mono">
+      <img class="mono" src="assets/img/monograma-ce.webp" alt="Monograma CE" width="560" height="859" decoding="async" fetchpriority="high">
+    </div>
+
+    <h1 class="names pressed">
+      <span class="n">Carol</span>
+      <span class="and" aria-label="e"><span aria-hidden="true">e</span></span>
+      <span class="n">Erick</span>
+    </h1>
+
+    <p class="date pressed">
+      <time datetime="2026-10-23" aria-label="23 de outubro de 2026">
+        <span class="date-parts">
+          <span>23</span><span class="bar" aria-hidden="true"></span><span>10</span><span class="bar" aria-hidden="true"></span><span>2026</span>
+        </span>
+      </time>
+    </p>
+
+    <p class="lead pressed">Reserve essa data para celebrar o nosso amor</p>
+
+    <div class="cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <section class="details" aria-label="Quando e onde">
+    <div class="block">
+      <p class="small-line pressed">sexta-feira</p>
+      <p class="big-line pressed">23 de outubro de 2026</p>
+      <p class="small-line pressed">às 19h</p>
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <div class="block">
+      <p class="big-line pressed">Platter for You</p>
+      <p class="addr pressed">Rua Otávio Lamartine, 541<br>Petrópolis, Natal – RN</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn primary" href="#confirmar">Confirmar presença</a>
+      <a class="btn quiet" href="#presentes">Lista de presentes</a>
+      <a class="btn quiet" href="https://maps.app.goo.gl/EjhNB69ipkHHYei68" target="_blank" rel="noopener">Ver no mapa</a>
+    </div>
+  </section>
+
+  <section class="closing">
+    
+    <p class="note pressed">“Acima de tudo, porém, <span class="nowrap">revistam-se</span> do&nbsp;amor, que&nbsp;é o&nbsp;elo perfeito.”</p>
+    <p class="verse-ref pressed">Colossenses 3:14</p>
+
+    <div class="end-art" data-ramos="fim" aria-hidden="true"></div>
+
+  </section>
+
+</main>
+
+<main id="presentes" hidden>
+  <div class="gifts-page">
+    <h1 class="page-title pressed">Lista de presentes</h1>
+    <p class="page-lead pressed">Sua presença é o nosso maior presente. Se quiser nos presentear, montamos uma lista na Amazon.</p>
+
+    <div class="gifts-cta">
+      <a class="btn primary" href="https://www.amazon.com.br/hz/wishlist/ls/2Y022Z1CBBSC" target="_blank" rel="noopener noreferrer">Ver lista na Amazon</a>
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section class="pix" aria-label="Presente por Pix">
+      <h2 class="pressed">Se preferir, por Pix</h2>
+      <p class="pix-note pressed">Qualquer valor será recebido com muito carinho.</p>
+      <p class="pix-key pressed" id="pixKey">carolbritomacedo@gmail.com</p>
+      <button class="btn primary" id="copyPix" type="button">Copiar chave Pix</button>
+      <p class="pix-note" id="pixStatus" role="status" aria-live="polite"></p>
+    </section>
+
+    <div class="page-back">
+      <a class="btn quiet" href="#convite">Voltar ao convite</a>
+    </div>
+  </div>
+</main>
+
+<main id="confirmar" hidden>
+  <div class="rsvp-page">
+    <h1 class="page-title pressed">Confirmar presença</h1>
+    <p class="page-lead pressed">Conte para a gente se você poderá estar conosco</p>
+    <p class="rsvp-greeting pressed" id="rsvpGreeting" hidden></p>
+
+    <form class="rsvp-form" id="rsvpForm" novalidate>
+      <fieldset class="field">
+        <legend class="pressed">Você poderá comparecer?</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="presenca" value="sim"><span>Sim, estarei lá</span></label>
+          <label class="choice"><input type="radio" name="presenca" value="nao"><span>Infelizmente, não poderei</span></label>
+        </div>
+      </fieldset>
+
+      <div id="rsvpMore" hidden>
+        <div class="field" id="countField">
+          <label for="qtd" class="pressed">Quantas pessoas vão? (incluindo você)</label>
+          <select class="input" id="qtd" name="quantidade"><option value="1">1 pessoa</option><option value="2">2 pessoas</option><option value="3">3 pessoas</option><option value="4">4 pessoas</option><option value="5">5 pessoas</option><option value="6">6 pessoas</option></select>
+        </div>
+
+        <div id="nameFields"></div>
+
+        <div class="hp" aria-hidden="true"><label>Não preencha este campo <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="form-actions">
+          <p class="form-msg" id="formMsg" role="alert"></p>
+          <button class="btn primary" type="submit" id="sendBtn">Enviar confirmação</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="rsvp-done" id="rsvpDone" hidden role="status">
+      <h2 class="pressed" id="doneTitle"></h2>
+      <p class="pressed" id="doneText"></p>
+      <button class="btn quiet again" type="button" id="again">Fazer outra confirmação</button>
+    </div>
+
+    <div class="page-back">
+      <a class="btn quiet" href="#convite">Voltar ao convite</a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

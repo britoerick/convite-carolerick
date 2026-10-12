@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Lista de presentes
+   Tela da lista da Amazon e do Pix.
+   ========================================================================== */
+
+.gifts-page { max-width: 34rem; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; text-align: center; }
+
+.gifts-cta { display: flex; justify-content: center; margin-top: var(--sp-4); }
+.pix { margin-top: 0; }
+.pix h2 { margin: 0; font-weight: 400; font-size: clamp(1.5rem, 6vw, 1.9rem); line-height: 1.2; letter-spacing: .02em; }
+.pix-note { text-wrap: balance; margin-top: var(--sp-1); font-style: normal; font-weight: 400; font-size: 1rem; letter-spacing: .02em; line-height: 1.6; color: var(--ink-soft); }
+.pix-key {
+  margin: var(--sp-3) auto 0;
+  max-width: 24rem;
+  padding: .9rem 1.2rem;
+  border: 1px solid rgba(58, 43, 31, .45);
+  border-radius: 14px;
+  font-size: 1.05rem;
+  letter-spacing: .04em;
+  overflow-wrap: anywhere;
+  user-select: all;
+  -webkit-user-select: all;
+}
+.pix .btn { margin-top: var(--sp-2); }
+#pixStatus { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

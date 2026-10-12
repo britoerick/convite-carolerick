@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Capa
+   Primeira tela: monograma, nomes, data e frase de abertura.
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem 0;   /* topo: 40 px, igual em qualquer tela */
+}
+.hero-mono { margin: 0 0 3rem; }
+.hero .mono { display: block; width: 150px; width: clamp(78px, 11.5svh, 96px); height: auto; margin: 0 auto; }
+.lead {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.02rem;
+  letter-spacing: .04em;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 24ch;
+  text-wrap: balance;
+  margin: 1.75rem 0 0;
+}
+.names {
+  margin: -.16em 0 calc(3.5rem - .25em);
+  font-family: var(--names);
+  font-weight: 300;
+  text-transform: none;
+  font-size: clamp(2.1rem, 11vw, 3.8rem);
+  line-height: 1.1;
+  letter-spacing: .02em;
+  padding-left: 0;
+  color: var(--ink);
+  text-shadow: none; /* traço fino: sem o relevo de tinta pressada */
+}
+.names .n { display: block; padding-left: .02em; /* compensa o espaço depois da última letra */ }
+.names .and {
+  letter-spacing: 0; /* o "e" não herda o espaço entre letras dos nomes: fica no centro dos traços */
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  margin: .1em 0;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--ink-soft);
+}
+.names .and > span { position: relative; top: -.017em; }
+.names .and::before, .names .and::after {
+  content: "";
+  width: 1.7rem;
+  height: 1px;
+  background: currentColor;
+  opacity: .6;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .9rem;
+  margin-top: 0;
+  font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: .18em;
+  padding-left: .18em;
+  color: var(--ink);
+}
+.bar { width: 1px; height: 1.5em; background: var(--ink); opacity: .75; }
+
+/* linha vertical: segue o mesmo ritmo das demais (40 px antes e depois) */
+.cue { margin-top: var(--sp-4); }
+.cue span { display: block; width: 1px; height: 3rem; background: var(--ink); opacity: .55; margin: 0 auto; }
+/* partes da data (23 | 10 | 2026) */
+.date-parts { display: inline-flex; align-items: center; gap: .9rem; }
+
+/* o conteúdo da capa fica acima dos ramos de oliveira do canto */
+.hero-mono, .lead, .names, .date { position: relative; z-index: 1; }

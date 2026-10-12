@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Encerramento
+   Versículo e referência, no fim da página.
+   ========================================================================== */
+
+.closing {
+  position: relative;
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.closing p.verse-ref {
+  margin-top: var(--sp-2);
+  font-size: .9rem;
+  letter-spacing: .14em;
+  color: var(--ink-soft);
+}
+.closing p.note {
+  max-width: 21rem;
+  text-wrap: balance;
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  letter-spacing: .02em;
+  color: var(--ink);
+}
+.nowrap { white-space: nowrap; }

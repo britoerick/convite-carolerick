@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Base
+   Variáveis (cores, espaçamentos, fontes), reinício e tipografia geral. Carregado primeiro.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+  --paper: #fefdfb;
+  --ink: #3a2b1f;
+  --ink-soft: #6a5846;
+  --line: #5d5b44;
+  --sp-1: .5rem;   /* dentro de um mesmo grupo */
+  --sp-2: 1rem;    /* entre linhas/elementos relacionados */
+  --sp-3: 1.5rem;  /* entre componentes */
+  --sp-4: 2.5rem;  /* entre grupos */
+  --sp-5: 4rem;    /* entre seções */
+  --sand: #d6bc8e;
+  --sage: #a8b4a0;
+  --mist: #aebdba;
+
+  --script: "Gilda Display", Georgia, "Times New Roman", serif;
+  --serif: "Gilda Display", Georgia, "Times New Roman", serif;
+  --names: "Cormorant", "Cormorant Garamond", Georgia, serif;
+
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+p { margin: 0; }
+
+/* o atributo hidden sempre esconde, mesmo em elementos com display próprio */
+[hidden] { display: none !important; }
+
+/* tinta "pressada" no papel */
+.pressed {
+  text-shadow: 0 1px 0 rgba(255, 251, 242, .75), 0 -.5px 0 rgba(50, 34, 20, .22);
+}

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Detalhes
+   Quando e onde: dia, horário, local e os três botões de ação.
+   ========================================================================== */
+
+.details {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: var(--sp-4) 1.5rem 0;
+  text-align: center;
+}
+.small-line {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.02rem;
+  letter-spacing: .04em;
+  color: var(--ink-soft);
+}
+.big-line {
+  font-weight: 400;
+  font-size: clamp(1.45rem, 6vw, 1.9rem);
+  line-height: 1.15;
+  letter-spacing: .01em;
+  margin: .25rem 0;
+}
+.addr { margin-top: var(--sp-1); font-size: 1rem; letter-spacing: .03em; color: var(--ink-soft); line-height: 1.7; }
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+  flex-wrap: wrap;
+}

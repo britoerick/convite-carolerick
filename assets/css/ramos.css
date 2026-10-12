@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Ramos de oliveira
+   Posição e tamanho dos desenhos do topo (canto) e do fim da página. O desenho em si é inserido por assets/js/ramos.js.
+   ========================================================================== */
+
+.end-art {
+  width: min(74%, 330px);
+  margin: 1rem 0 0 -1.5rem;
+  clip-path: inset(0 -40px 0 -40px);
+  pointer-events: none;
+}
+.end-art svg { display: block; width: 100%; height: auto; overflow: visible; }
+.end-art { aspect-ratio: 300 / 350; } /* reserva o espaço antes de o desenho ser inserido pelo JavaScript */
+
+.corner-art {
+  position: absolute;
+  top: calc(-1 * env(safe-area-inset-top, 0px));
+  right: 0;
+  width: min(44vw, 190px);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.corner-art svg { display: block; width: 100%; height: auto; overflow: visible; }

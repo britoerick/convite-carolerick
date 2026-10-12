@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Componentes
+   Peças usadas em várias telas: linha vertical, botões e cabeçalho das telas internas.
+   ========================================================================== */
+
+.rule { width: 1px; height: 3rem; background: var(--ink); opacity: .55; margin: var(--sp-4) auto; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  width: 100%;
+  max-width: 17rem;
+  padding: .7rem 1.5rem;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  background: transparent;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: .07em;
+  text-decoration: none;
+  transition: background-color .25s ease, color .25s ease;
+}
+.btn:active { opacity: .85; }
+@media (hover: hover) { .btn:hover { background: var(--ink); color: var(--paper); } }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.btn.primary { background: var(--ink); color: var(--paper); }
+@media (hover: hover) { .btn.primary:hover { background: transparent; color: var(--ink); } }
+.btn.quiet { border-color: rgba(58, 43, 31, .45); font-weight: 400; }
+button.btn { appearance: none; -webkit-appearance: none; cursor: pointer; }
+
+/* ---------- Título, abertura e botão "voltar" das telas internas (presentes e confirmação) ---------- */
+.page-title {
+  margin: 0;
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 9vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: .015em;
+  color: var(--ink);
+}
+.page-lead { text-wrap: balance; max-width: 26rem; margin: var(--sp-2) auto 0; font-style: normal; font-weight: 400; font-size: 1.05rem; line-height: 1.7; letter-spacing: .03em; color: var(--ink-soft); }
+.page-back { margin-top: var(--sp-4); display: flex; justify-content: center; }
